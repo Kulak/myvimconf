@@ -12,9 +12,9 @@ set laststatus=2
 
 " tab takes 4 spaces
 set tabstop=4
-" " always use tabs if tabstop == softtabstop
+" always use tabs if tabstop == softtabstop
 set softtabstop=4
-" " set automatic indent to 4; without it it is 8
+" set automatic indent to 4; without it it is 8
 set shiftwidth=4
 
 highlight clear Normal
@@ -27,7 +27,7 @@ call plug#end()
 
 " \-i runs go-info command
 au FileType go nmap <leader>i <Plug>(go-info)
-" " \-bt runs go-build with new tab
+" \-bt runs go-build with new tab
 au FileType go nmap <C-B> <Plug>(go-build)
 au FileType go imap <C-B> <Plug>(go-build)
 
