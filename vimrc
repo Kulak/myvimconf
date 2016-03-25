@@ -29,9 +29,17 @@ if has("gui_running")
 endif
 
 " https://github.com/junegunn/vim-plug
-call plug#begin('$HOME/.vim/plugged')
+if has('unix')
+	call plug#begin('$HOME/.vim/plugged')
+else
+	call plug#begin('~/vimfiles/plugged')
+endif
 " Make sure you use single quotes
+
+" Shorthand notation; fetches https://github.com/fatih/vim-go
 Plug 'fatih/vim-go'
+Plug 'scrooloose/nerdtree'
+
 call plug#end()
 
 " \-i runs go-info command
