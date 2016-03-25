@@ -29,7 +29,7 @@ if has("gui_running")
 endif
 
 " https://github.com/junegunn/vim-plug
-call plug#begin('~/vimfiles/plugged')
+call plug#begin('$HOME/.vim/plugged')
 " Make sure you use single quotes
 Plug 'fatih/vim-go'
 call plug#end()
@@ -70,4 +70,15 @@ set backupdir=~/.backup//
 "
 " swap is used to make sure file write is not disruptive
 set directory=~/.backup//
+
+" http://superuser.com/questions/634326/how-can-i-get-a-block-cursor-in-vim-in-the-cygwin-terminal#634327
+" set environment variable in ~/.bashrc file:
+" export MYHOST=CYGWIN only if using cygwin
+if $MYHOST ==? 'CYGWIN'
+	" turn on block caret in normal mode
+	let &t_ti.="\e[1 q"
+	let &t_SI.="\e[5 q"
+	let	&t_EI.="\e[1 q"
+	let &t_te.="\e[0 q"
+endif
 
