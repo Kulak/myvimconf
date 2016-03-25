@@ -1,3 +1,6 @@
+" Use if has('mac') for OS dependent code
+" Values are mac unix, win32
+
 set hidden
 
 set statusline =
@@ -63,7 +66,8 @@ endif
 " That's disruptive in many cases including WinRAR built-in view of the file.
 "
 " backup directory
-set backupdir=~/editorbackup//
+set backupdir=~/.backup//
 "
 " swap is used to make sure file write is not disruptive
-set directory=~/editorbackup//
+set directory=~/.backup//
+
