@@ -23,6 +23,8 @@ set shiftwidth=4
 set background=dark
 highlight clear Normal
 colorscheme darkblue
+" highlight all search results
+set hlsearch
 
 if has("gui_running")
 	set guifont=Lucida_Console:h10:cANSI
