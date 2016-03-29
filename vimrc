@@ -76,9 +76,10 @@ endif
 " Thus the sequences below are ESC followed by key.
 "
 " Go to next file in the buffer list (Alt-Right arrow)
-:map <Right> :hide bn<CR>
+" :map  <Esc>
+:map <Esc><Right> :hide bn<CR>
 " Go to the prev file in the buffer list (Alt-Left arrow)
-:map ^[<Left> :hide bp<CR>
+:map <Esc><Left> :hide bp<CR>
 
 " BACKUP and SWAP
 " If path ends with two path separators, then a full name of the file
