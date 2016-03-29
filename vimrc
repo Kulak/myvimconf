@@ -75,10 +75,15 @@ endif
 " Putty sends ESC sequence for its arrow keys.
 " Thus the sequences below are ESC followed by key.
 "
-" Go to next file in the buffer list (Alt-Right arrow)
+" :map <Right> :hide bn<CR>
+" :map <Left> :hide bp<CR>
+"
+" The following remapping of the lines above does not work
 " :map  <Esc>
+"
+" Go to next file in the buffer list (Esc-Right arrow)
 :map <Esc><Right> :hide bn<CR>
-" Go to the prev file in the buffer list (Alt-Left arrow)
+" Go to the prev file in the buffer list (Esc-Left arrow)
 :map <Esc><Left> :hide bp<CR>
 
 " BACKUP and SWAP
