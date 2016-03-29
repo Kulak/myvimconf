@@ -66,7 +66,19 @@ else
 	"endif
 endif	
 
-" map <A-Right> :tabNext
+" Use Ctrl-V and ESC to generate ^[
+" The following two sequences work in putty and vim 7.4
+" Right Alt key does not work in putty.
+" The sequences do not work in Tera Term,
+" because it simply does not send Alt keys.
+"
+" Putty sends ESC sequence for its arrow keys.
+" Thus the sequences below are ESC followed by key.
+"
+" Go to next file in the buffer list (Alt-Right arrow)
+:map <Right> :hide bn<CR>
+" Go to the prev file in the buffer list (Alt-Left arrow)
+:map ^[<Left> :hide bp<CR>
 
 " BACKUP and SWAP
 " If path ends with two path separators, then a full name of the file
