@@ -85,34 +85,9 @@ set directory=~/.backup//
 " set environment variable in ~/.bashrc file:
 " export MYHOST=CYGWIN only if using cygwin
 if $MYHOST ==? 'CYGWIN'
-	" turn on block caret in normal mode
-	let &t_ti.="\e[1 q"
-	let &t_SI.="\e[5 q"
-	let	&t_EI.="\e[1 q"
-	let &t_te.="\e[0 q"
-endif
-if &term =~ "xterm"
-	" Tera Term scenario as documented in
-	" http://www.teraterm.org/manual/en/usage/tips/vim.html
-	"
-	" In insert mode: Blink vertical line
-	let &t_SI.="\e[5 q"
-	" In normal mode: Blink block 
-	let &t_EI.="\e[1 q"
-	" delay to wait for cursor to change from Insert to Normal mode
-	" temoutlen solution appears to be the least complicated and it works
-	set timeoutlen=160
-
-	" For details about 
-	" - Speed up vsplit scrolling
-	" - Auto indent can be disabled on pasting from clipboard
-	" See:
-	" http://www.teraterm.org/manual/en/usage/tips/vim.html
-	
-	" Allow title retrival and storage
-	" Thus default phraze "thanks for flying vim" is not displayed
-	let &t_ti .= "\e[22;0t"
-	let &t_te .= "\e[23;0t"
+	source ~/.vim/cygwin.vim
+elseif $MYHOST ==? 'TERATERM'
+	source ~/.vim/teraterm.vim
 endif
 
 " enable window title (terminal emulator window title)
