@@ -41,6 +41,11 @@ endif
 " Shorthand notation; fetches https://github.com/fatih/vim-go
 Plug 'fatih/vim-go'
 Plug 'scrooloose/nerdtree'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+
+" After new Plug 'userid/project' is written
+" Use :PlugInstall command to install new plugin.
 
 call plug#end()
 
