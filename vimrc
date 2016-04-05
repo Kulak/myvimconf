@@ -75,6 +75,17 @@ else
 	"if exists("+columns")
 	"	set columns=100
 	"endif
+	
+	" http://superuser.com/questions/634326/how-can-i-get-a-block-cursor-in-vim-in-the-cygwin-terminal#634327
+	" set environment variable in ~/.bashrc file:
+	" export MYHOST=CYGWIN only if using cygwin
+	if $MYHOST ==? 'CYGWIN'
+		source ~/.vim/cygwin.vim
+	elseif $MYHOST ==? 'TERATERM'
+		source ~/.vim/teraterm.vim
+	elseif $TERM ==? 'xterm'
+		source ~/.vim/cygwin.vim
+	endif
 endif	
 
 " Use Ctrl-V and ESC to generate ^[
@@ -109,15 +120,6 @@ set backupdir=~/.backup//
 "
 " swap is used to make sure file write is not disruptive
 set directory=~/.backup//
-
-" http://superuser.com/questions/634326/how-can-i-get-a-block-cursor-in-vim-in-the-cygwin-terminal#634327
-" set environment variable in ~/.bashrc file:
-" export MYHOST=CYGWIN only if using cygwin
-if $MYHOST ==? 'CYGWIN'
-	source ~/.vim/cygwin.vim
-elseif $MYHOST ==? 'TERATERM'
-	source ~/.vim/teraterm.vim
-endif
 
 " enable window title (terminal emulator window title)
 set title
