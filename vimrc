@@ -32,7 +32,7 @@ if has("gui_running")
 		set guifont=Liberation\ Mono\ 10
 	else
 		" works with cygwin and windows
-		"set guifont=Lucida_Console:h10:cANSI
+		set guifont=Lucida_Console:h10:cANSI
 	endif
 endif
 
