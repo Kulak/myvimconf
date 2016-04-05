@@ -27,7 +27,13 @@ colorscheme darkblue
 set hlsearch
 
 if has("gui_running")
-	set guifont=Lucida_Console:h10:cANSI
+	if has('gui_gtk2')
+		" works with Ubuntu; requires Liberation fonts installed
+		set guifont=Liberation\ Mono\ 10
+	else
+		" works with cygwin and windows
+		"set guifont=Lucida_Console:h10:cANSI
+	endif
 endif
 
 " https://github.com/junegunn/vim-plug
