@@ -49,6 +49,7 @@ Plug 'fatih/vim-go'
 Plug 'scrooloose/nerdtree'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+Plug 'moll/vim-bbye'
 
 " After new Plug 'userid/project' is written
 " Use :PlugInstall command to install new plugin.
