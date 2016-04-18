@@ -50,6 +50,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'moll/vim-bbye'
+" Plug 'fidian/hexmode' - generates errors
 
 " After new Plug 'userid/project' is written
 " Use :PlugInstall command to install new plugin.
