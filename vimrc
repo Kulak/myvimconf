@@ -5,6 +5,7 @@ set hidden
 
 set statusline =
 set statusline +=%l     " current line
+set statusline +=:%v	" current column number
 set statusline +=\      " space separator
 set statusline +=%t     " file name
 set statusline +=%m     " modified file marker
@@ -23,8 +24,13 @@ set shiftwidth=4
 set background=dark
 highlight clear Normal
 colorscheme darkblue
+
 " highlight all search results
 set hlsearch
+
+" highlight current cursor line or in editor:
+"    :set cursorline
+set cursorline
 
 if has("gui_running")
 	if has('gui_gtk2')
