@@ -21,16 +21,18 @@ set softtabstop=4
 " set automatic indent to 4; without it it is 8
 set shiftwidth=4
 
-set background=dark
-highlight clear Normal
-colorscheme darkblue
+" highlight clear Normal
+" highlight Cursor guifg=white guibg=steelblue
+" set background=dark
+" colorscheme darkblue
 
 " highlight all search results
 set hlsearch
 
 " highlight current cursor line or in editor:
+" On FreeBSD moving cursor up results in a narrow line printed across entire line
 "    :set cursorline
-set cursorline
+" set cursorline
 
 if has("gui_running")
 	if has('gui_gtk2')
@@ -54,7 +56,10 @@ endif
 Plug 'fatih/vim-go'
 Plug 'scrooloose/nerdtree'
 Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
+" Disabled vim-markdown because
+" Markdown plugin folds by default and generates 'q' letter
+" embedded in the text on FreeBSD console
+" Plug 'plasticboy/vim-markdown'
 Plug 'moll/vim-bbye'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
